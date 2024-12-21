@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .display {
+            background: #292929;
+            color: #fff;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            flex: 1 0 25%;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .button:active {
+            background: #ccc;
+        }
+
+        .button:nth-child(4n) {
+            border-right: none;
+        }
+
+        .button:last-child {
+            flex: 1 0 100%;
+            background: #292929;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <div class="button">7</div>
+            <div class="button">8</div>
+            <div class="button">9</div>
+            <div class="button">/</div>
+            <div class="button">4</div>
+            <div class="button">5</div>
+            <div class="button">6</div>
+            <div class="button">*</div>
+            <div class="button">1</div>
+            <div class="button">2</div>
+            <div class="button">3</div>
+            <div class="button">-</div>
+            <div class="button">C</div>
+            <div class="button">0</div>
+            <div class="button">=</div>
+            <div class="button">+</div>
+        </div>
+    </div>
+</body>
+</html>
